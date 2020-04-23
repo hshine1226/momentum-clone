@@ -5,8 +5,23 @@ const toDoForm = document.querySelector(".js-form-toDo"),
 //LS: Local Storage
 const TODOS_LS = "toDos";
 
-const toDos = [];
+let toDos = [];
 
+function deleteToDo(event) {
+  const button = event.target;
+  const li = button.parentNode;
+  toDoList.removeChild(li);
+  /*filter() 메서드는 주어진 함수의 
+  테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환한다. 
+  */
+  const cleanToDos = toDos.filter(function (toDo) {
+    return toDo.id !== parseInt(li.id);
+  });
+  /*toDos를 cleanToDos로 변경하고
+  local storage에 변경된 값을 저장한다.*/
+  toDos = cleanToDos;
+  saveToDos();
+}
 /*JSON: JavaScript Object Notation*/
 function saveToDos() {
   //localSorage에 object를 text화 시켜서 저장하기 위해 JSON.stringify를 사용한다.
@@ -20,6 +35,7 @@ function paintToDo(text) {
   // ID 값을 toDos의 길이 + 1로 지정한다.
   const newId = toDos.length + 1;
   deleteBotton.innerText = "X";
+  deleteBotton.addEventListener("click", deleteToDo);
   span.innerText = text;
   li.appendChild(deleteBotton);
   li.appendChild(span);
