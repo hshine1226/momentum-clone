@@ -1,11 +1,64 @@
+@import "reset.css";
+* {
+  box-sizing: border-box;
+}
+.hero {
+  background: black url(images/1.jpg) center / cover;
+}
+@media (max-width: 1024px) {
+  .hero {
+    background: black url(images/1.jpg) center / cover;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    background: black url(images/1.jpg) center / cover;
+  }
+}
+html {
+  height: 100%;
+}
 body {
-  background-color: #34495e;
+  color: white;
+  font-size: 4rem;
+  height: 100%;
+}
+section {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: red; */
+  height: 100%;
+}
+.wrapper__clock {
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.js-form-toDo input {
+  background-color: transparent;
+  width: 30rem;
+  height: 3rem;
+  border: none;
+  border-bottom: solid white 3px;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+}
+.js-form-toDo input::placeholder {
+  color: white;
+  font-size: 1rem;
 }
 .form,
 .grettings {
   display: none;
 }
-
 .showing {
   display: block;
 }
