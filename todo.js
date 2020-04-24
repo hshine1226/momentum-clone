@@ -11,8 +11,8 @@ function deleteToDo(event) {
   const button = event.target;
   const li = button.parentNode;
   toDoList.removeChild(li);
-  /*filter() 메서드는 주어진 함수의 
-  테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환한다. 
+  /*filter() 메서드는 요소들을 걸러내는 것이 목적이다.
+  return이 true인 요소만 모아서 새로운 list를 만든다. 
   */
   const cleanToDos = toDos.filter(function (toDo) {
     return toDo.id !== parseInt(li.id);
@@ -34,7 +34,7 @@ function paintToDo(text) {
   const span = document.createElement("span");
   // ID 값을 toDos의 길이 + 1로 지정한다.
   const newId = toDos.length + 1;
-  deleteBotton.innerText = "X";
+  deleteBotton.innerText = "❎";
   deleteBotton.addEventListener("click", deleteToDo);
   span.innerText = text;
   li.appendChild(deleteBotton);
