@@ -9,6 +9,8 @@
 - To-do List
 - Weather
 - Clock
+- Daily Photo
+- Offline Support
 
 ## 링크
 
