@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Momentum Clone</title>
+    <script
+      src="https://kit.fontawesome.com/142b9259dc.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css"
@@ -16,20 +20,23 @@
           <div class="js-clock">
             <h1>00:00:00</h1>
           </div>
-          <form class="js-form-greeting form">
-            <input type="text" placeholder="이름이 뭐에요?" />
-          </form>
+          <div class="wrapper__js-form-greeting">
+            <h2>안녕하세요. 이름이 뭐에요?</h2>
+            <form class="js-form-greeting form">
+              <input type="text" placeholder="" />
+            </form>
+          </div>
           <h4 class="js-greetings grettings"></h4>
         </div>
-        <div class="wrapper__toDO">
+        <div class="wrapper__toDo">
           <form class="js-form-toDo">
             <input type="text" placeholder="할 일을 적으세요." />
           </form>
           <div class="toDo__list">
             <ul class="js-list-toDo"></ul>
           </div>
-          <span class="js-weather"></span>
         </div>
+        <span class="js-weather"></span>
       </div>
     </section>
     <script src="clock.js"></script>

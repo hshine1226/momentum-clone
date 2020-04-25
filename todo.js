@@ -34,11 +34,12 @@ function paintToDo(text) {
   const span = document.createElement("span");
   // ID 값을 toDos의 길이 + 1로 지정한다.
   const newId = toDos.length + 1;
-  deleteBotton.innerText = "❎";
-  deleteBotton.addEventListener("click", deleteToDo);
+  deleteBotton.innerHTML = `<i class="fas fa-times"></i>`;
+  const deleteIcon = deleteBotton.querySelector("i");
+  deleteIcon.addEventListener("click", deleteToDo);
   span.innerText = text;
-  li.appendChild(deleteBotton);
   li.appendChild(span);
+  li.appendChild(deleteIcon);
   li.id = newId;
   toDoList.appendChild(li);
   const toDoObject = {
@@ -67,6 +68,7 @@ function loadToDos() {
     });
   }
 }
+
 function init() {
   loadToDos(); //Local Storage에서 뭔가를 로드해야함.
   toDoForm.addEventListener("submit", handleSubmit);

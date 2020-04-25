@@ -1,9 +1,13 @@
 const form = document.querySelector(".js-form-greeting"),
   input = form.querySelector("input"),
-  gretting = document.querySelector(".js-greetings");
+  gretting = document.querySelector(".js-greetings"),
+  askNameWrapper = document.querySelector(".wrapper__js-form-greeting"),
+  askName = askNameWrapper.querySelector("h2"),
+  toDo = document.querySelector(".js-form-toDo");
 
 const USER_LS = "currentUser",
-  SHOWING_CL = "showing";
+  SHOWING_CL = "showing",
+  UNSHOWING_CL = "unshowing";
 
 /*Local Storage에 유저 이름을 추가하는 함수*/
 function saveName(text) {
@@ -27,9 +31,11 @@ function askForName() {
 }
 /*환영인사 출력*/
 function paintGretting(text) {
+  askName.classList.add(UNSHOWING_CL);
   form.classList.remove(SHOWING_CL);
   gretting.classList.add(SHOWING_CL);
   gretting.innerText = `${text}님 안녕하세요.`;
+  toDo.classList.add(SHOWING_CL);
 }
 /*Local Storage에서 현재 유저 이름을 받아온다.
 현재 유저가 없다면, 이름을 물어보는 input 창을 나타내고
