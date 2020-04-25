@@ -2,7 +2,9 @@
 
 > Momentum Clone
 
-모멘텀이라는 생산성 앱을 클론코딩하는 프로젝트입니다.
+모멘텀이라는 생산성 앱을 클론코딩한 프로젝트입니다.
+
+<img src="header.png" width="50%" height="50%">
 
 ## 기능
 
