@@ -2,10 +2,15 @@
 
 > Momentum Clone
 
-모멘텀이라는 생산성 앱을 클론코딩하는 프로젝트.
+모멘텀이라는 생산성 앱을 클론코딩하는 프로젝트입니다.
 
 ## 기능
 
 - To-do List
 - Weather
 - Clock
+
+## 링크
+
+- 모멘텀: <https://momentumdash.com/>
+- 모멘텀 클론: <https://hshine1226.github.io/momentum-clone/>
